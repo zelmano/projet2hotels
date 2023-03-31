@@ -15,12 +15,11 @@
     </tr>
     <?php foreach ($reservations as $reservation): ?>
       <tr>
-        <td><?php echo $reservation['reservation_id']; ?></td>
-        <td><?php echo $reservation['customer_id']; ?></td>
-        <td><?php echo $reservation['room_id']; ?></td>
-        <td><?php echo $reservation['check_in']; ?></td>
-        <td><?php echo $reservation['check_out']; ?></td>
-        <td><?php echo $reservation['price']; ?></td>
+        <td><?php echo $reservation['nom_client']; ?></td>
+        <td><?php echo $reservation['id_chambre']; ?></td>
+        <td><?php echo $reservation['date_arrivee']; ?></td>
+        <td><?php echo $reservation['date_fin']; ?></td>
+        <td><?php echo $reservation['id_sejour']; ?></td>
       </tr>
     <?php endforeach; ?>
   </table>
