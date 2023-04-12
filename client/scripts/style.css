@@ -1,0 +1,36 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'DM Mono', monospace;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(../sources/hotel_background.png);
+}
+
+.room_card{
+  background: rgba(255,255,255,0.1);
+  width: 600px;
+  height: 250px;
+  backdrop-filter: blur(10px);/*5px*/
+  border-radius: 10px;
+  border-top: 1px solid rgb(125,125,125);
+  border-left: 1px solid rgb(125,125,125);
+}
+
+.room_card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.4px);
+  -webkit-backdrop-filter: blur(4.4px);
+  border: 1px solid rgba(255, 255, 255, 0.29);
+}
