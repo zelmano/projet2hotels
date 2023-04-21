@@ -5,14 +5,29 @@
   <link rel="stylesheet" href="/client/scripts/style.css">
 </head>
 <body>
-  <h1>Reservations</h1>
   <div>
     <div class="room_card">
-      Nom hotel
-      Prix
-      Machin
-      Truc
-      bouton réserver
+      <h2>Hotel 1</h2>
+      <p>petit</p>
+      <button class="btn">Reserver</button>
+    </div>
+    <div class="room_card">
+      <h2>Hotel 2</h2>
+      <table>
+        <tr>
+          <th>catégorie</th>
+          <th>type</th>
+        </tr>
+        <tr>
+          <td>A</td>
+          <td>chambre simple</td>
+        </tr>
+      </table>
+      <button class="btn">Reserver</button>
+    </div>
+    <div class="room_card">
+      <h2>Hotel 3</h2>
+      <button class="btn">Reserver</button>
     </div>
   </div>
 </body>
