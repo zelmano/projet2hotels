@@ -16,10 +16,6 @@
 
   <h2>Formulaire</h2>
 
-  <?php
-  var_dump($categories);
-  ?>
-
   <form action="" method="post">
 
     <!--séléction de l'hotel-->
