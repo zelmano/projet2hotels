@@ -7,7 +7,7 @@ require_once('../models/Chambre.php');
 class Reservation{
 
     //Fonction qui renvoie la liste du nom des hotels
-    static function getHotels(){//z
+    static function getHotels(){//zel
         $db = Db::connectionDB();
         $request = "SELECT nom FROM hotel";
         $stmt = $db->prepare($request);
