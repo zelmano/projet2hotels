@@ -1,5 +1,4 @@
 <?php
-
 require_once('../models/reservation_m.php');
 
 $reservations = Reservation::getReservations();

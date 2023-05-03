@@ -1,5 +1,6 @@
 <?php
 require_once('../models/Db.php');
+
 require_once('../models/Recherche.php');
 require_once('../models/Chambre.php');
 
