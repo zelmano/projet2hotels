@@ -77,7 +77,7 @@ $debut = 'none';
 $denomination = '1';
 
 
-//print_r(Recherche::getRecherche($hotel, $debut, $fin, $denomination));
+print_r(Recherche::getRecherche($hotel, $debut, $fin, $denomination));
 
 
 ?>
