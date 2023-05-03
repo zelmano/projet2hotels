@@ -5,6 +5,16 @@ require_once('../models/Chambre.php');
 
 
 class Reservation{
+
+    //Fonction qui renvoie la liste du nom des hotels
+    static function getHotels(){//z
+        $db = Db::connectionDB();
+        $request = "SELECT nom FROM hotel";
+        $stmt = $db->prepare($request);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     //Fonction qui renvoie les reservations
     static function getReservations(){
         $db=Db::connectionDB();
