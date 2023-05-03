@@ -7,7 +7,7 @@ require_once('../models/Chambre.php');
 class Recherche // codé par julia
 {
 
-    static function getHotels(){ //codé par Zelman
+    static function getHotels(){ //codé par zelman
         $db = Db::connectionDB();
         $request = "SELECT nom FROM hotel";
         $stmt = $db->prepare($request);
