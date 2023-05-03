@@ -14,6 +14,24 @@ body{
   background-size: cover;
 }
 
+form{
+  width: 90vw;
+  height: 10vw;
+  color: whitesmoke;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+
+  margin: 2vw;
+
+  backdrop-filter: blur(20px) saturate(200%);
+  background-color: rgba(17, 25, 40, 0.59);
+  border-radius: 1vw;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
 .room_card{
   width: 90vw;
   height: 10vw;
