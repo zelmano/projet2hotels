@@ -2,7 +2,7 @@
 <head>
   <meta charset="utf-8">
   <title>Reservations</title>
-  <link rel="stylesheet" href="/client/scripts/style.css">
+  <link rel="stylesheet" href="/client/scripts/style.csss">
 </head>
 <body>
 
@@ -19,7 +19,8 @@
   <h2>Formulaire</h2>
 
   <?php
-  $nbhotels
+  $nbhotels=4;
+  var_dump($hotels);
 
   ?>
 
@@ -33,10 +34,10 @@
       }
       ?>
 
-      <option value="1">Hotel de Caen</option>
+      <!-- <option value="1">Hotel de Caen</option>
       <option value="2">Hotel de Brest</option>
       <option value="3">Hotel de Paris</option>
-      <option value="4">Hotel de Nantes</option>
+      <option value="4">Hotel de Nantes</option> -->
     </select>
 
     <label for="type">Type de chambre</label>
