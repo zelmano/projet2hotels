@@ -7,14 +7,6 @@ require_once('../models/Chambre.php');
 class Recherche // codé par julia
 {
 
-    static function getHotels(){ //codé par zelman
-        $db = Db::connectionDB();
-        $request = "SELECT nom FROM hotel";
-        $stmt = $db->prepare($request);
-        $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
-
     // Effectue les recherches selon certains critères
     static function getRecherche($hotel, $debut, $fin, $denomination)
     {
