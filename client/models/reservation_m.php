@@ -7,10 +7,19 @@ require_once('../models/Chambre.php');
 
 class Reservation{
 
-    //Fonction qui renvoie la liste du nom des hotels
-    static function getHotels(){//zel
+    //Fonction qui renvoie la liste du nom des hotels (zel)
+    static function getHotels(){
         $db = Db::connectionDB();
         $request = "SELECT nom FROM hotel";
+        $stmt = $db->prepare($request);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    //Fonction qui renvoie la liste des dénominations des catégories (zel)
+    static function getCategories(){
+        $db = Db::connectionDB();
+        $request = "SELECT denomination FROM categorie";
         $stmt = $db->prepare($request);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
