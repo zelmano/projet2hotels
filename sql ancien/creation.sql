@@ -1,17 +1,3 @@
-drop table if exists Client CASCADE ;
-CREATE TABLE Client
-(
-    id_client SERIAL,
-    nom VARCHAR(100),
-    prenom VARCHAR(100),
-    email VARCHAR(255),
-    pays VARCHAR(255),
-    motDePasse VARCHAR(255),
-PRIMARY KEY(id_client)
-);
-
-
-
 drop table if exists Classe CASCADE ;
 create table Classe
 (
@@ -70,15 +56,13 @@ create table Reservation
 (
 	id_sejour SERIAL,
 	id_chambre int not null,
-	id_client int not null,
 	date_debut date not null,
 	date_fin date not null,
 	date_arrivee date,
 	nom_client varchar(50),
 	paiement numeric(8,2),
 PRIMARY KEY(id_sejour),
-FOREIGN KEY (id_chambre) REFERENCES Chambre (id_chambre),
-FOREIGN KEY (id_client) REFERENCES CLient (id_client)
+FOREIGN KEY (id_chambre) REFERENCES Chambre (id_chambre)
 );
 
 
@@ -114,5 +98,3 @@ PRIMARY KEY(id_cc),
 FOREIGN KEY (id_conso) REFERENCES Conso (id_conso),
 FOREIGN KEY (id_sejour) REFERENCES Reservation (id_sejour)
 );
-
-

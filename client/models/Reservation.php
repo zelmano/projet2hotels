@@ -5,7 +5,7 @@ require_once('../models/Chambre.php');
 
 
 class Reservation{
-    //Fonction qui renvoie les reservations faites par zelman
+    //Fonction qui renvoie les reservations
     static function getReservations(){
         $db=Db::connectionDB();
         $string='SELECT * FROM reservation';
