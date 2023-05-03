@@ -5,8 +5,6 @@
   <link rel="stylesheet" href="/client/scripts/style.csss">
 </head>
 <body>
-
-  <!-- faire le formulaire en POST pour qu'il soit récupéré par le controlleur (paradigme MVC)-->
   <h1>Rechercher une chambre</h1>
   <h2>Recherche</h2>
   <p>Vous pouvez rechercher une chambre en fonction de l'hotel, du type de chambre et des dates de début et de fin.</p>
@@ -18,24 +16,32 @@
 
   <h2>Formulaire</h2>
 
+  <?php
+  var_dump($categories);
+  ?>
+
   <form action="" method="post">
 
     <!--séléction de l'hotel-->
     <label for="hotel">Hotel</label>
     <select name="hotel" id="hotel">
       <?php
-      //on récupère la liste des hotels et on les parcourt pour créer les différentes options
+      //on récupère la liste des hotels et on les parcourt pour créer les différentes options de recherche
       for ($i=0;$i<count($hotels);$i++){
-        echo '<option value="'.$hotels[$i]['id_hotel'].'">'.$hotels[$i]['nom'].'</option>';
+        echo '<option value="'.$hotels[$i]['nom'].'">'.$hotels[$i]['nom'].'</option>';
       }
       ?>
     </select>
 
-    <label for="type">Type de chambre</label>
-    <select name="type" id="type">
-      <option value="simple">Simple</option>
-      <option value="double">Double</option>
-      <option value="double_saledebain">Double avec salle de bain</option>
+    <!--séléction de la catégorie de chambre-->
+    <label for="categorie">Catégorie</label>
+    <select name="categorie" id="categorie">
+      <?php
+      //on récupère la liste des dénominations des categories de chambre et on les parcourt pour créer les différentes options de recherche
+      for ($i=0;$i<count($categories);$i++){
+        echo '<option value="'.$categories[$i]['denomination'].'">'.$categories[$i]['denomination'].'</option>';
+      }
+      ?>
     </select>
 
     <label for="datedebut">Date de début</label>
