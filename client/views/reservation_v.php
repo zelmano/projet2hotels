@@ -50,9 +50,7 @@
   </form>
 
 
-
-
-  <div>
+  <!-- <div>
     <div class="room_card">
       <h2>Hotel 1</h2>
       <table>
@@ -97,6 +95,6 @@
       </table>
       <button class="btn">Reserver</button>
     </div>
-  </div>
+  </div> -->
 </body>
 </html>
