@@ -18,26 +18,17 @@
 
   <h2>Formulaire</h2>
 
-  <?php
-  $nbhotels=4;
-  var_dump($hotels);
-
-  ?>
-
   <form action="" method="post">
+
+    <!--séléction de l'hotel-->
     <label for="hotel">Hotel</label>
     <select name="hotel" id="hotel">
-
       <?php
-      for ($i = 0; $i < $nbhotels; $i++) {
-        echo '<option value="' . $hotels[$i]['id_hotel'] . '">' . $hotels[$i]['nom'] . '</option>';
+      //on récupère la liste des hotels et on les parcourt pour créer les différentes options
+      for ($i=0;$i<count($hotels);$i++){
+        echo '<option value="'.$hotels[$i]['id_hotel'].'">'.$hotels[$i]['nom'].'</option>';
       }
       ?>
-
-      <!-- <option value="1">Hotel de Caen</option>
-      <option value="2">Hotel de Brest</option>
-      <option value="3">Hotel de Paris</option>
-      <option value="4">Hotel de Nantes</option> -->
     </select>
 
     <label for="type">Type de chambre</label>
