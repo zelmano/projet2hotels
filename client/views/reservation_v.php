@@ -90,20 +90,31 @@
       <?php
       //on parcourt la liste des chambres disponibles et on les affiche
       for ($i=0;$i<count($chambres);$i++){
-        echo '<div class="room_card">';
-        echo '<h2>'.$chambres[$i]['nom'].'</h2>';
-        echo '<table>';
-        echo '<tr>';
-        echo '<th>catégorie</th>';
-        echo '<th>type</th>';
-        echo '</tr>';
-        echo '<tr>';
-        echo '<td>'.$chambres[$i]['denomination'].'</td>';
-        echo '<td>'.$chambres[$i]['type'].'</td>';
-        echo '</tr>';
-        echo '</table>';
-        echo '<button class="btn">Reserver</button>';
-        echo '</div>';
+        //création de la carte de la chambre avec les infos suivantes : nom de l'hotel, catégorie de la chambre, prix de la chambre
+        //le but est d'afficher les informations de la chambre avec un bouton réserver
+        echo '<div class="room_card">
+                <h2>'.$chambres[$i]['nom_hotel'].'</h2>
+                <table>
+                  <tr>
+                    <th>catégorie</th>
+                    <th>prix</th>
+                  </tr>
+                  <tr>
+                    <td>'.$chambres[$i]['categorie'].'</td>
+                    <td>'.$chambres[$i]['prix'].'€</td>
+                  </tr>
+                </table>
+                <form action="" method="post">
+                  <input type="hidden" name="id_chambre" value="'.$chambres[$i]['id_chambre'].'">
+                  <input type="hidden" name="id_hotel" value="'.$chambres[$i]['id_hotel'].'">
+                  <input type="hidden" name="categorie" value="'.$chambres[$i]['categorie'].'">
+                  <input type="hidden" name="prix" value="'.$chambres[$i]['prix'].'">
+                  <input type="hidden" name="datedebut" value="'.$datedebut.'">
+                  <input type="hidden" name="datefin" value="'.$datefin.'">
+                  <button class="btn" name="reserver">Reserver</button>
+                </form>
+              </div>';
+              
       }
       ?>
 
