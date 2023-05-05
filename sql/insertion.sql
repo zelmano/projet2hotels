@@ -1,10 +1,17 @@
 insert into Client(nom, prenom, email, pays, motdepasse) values
-('Brun', 'Zelman', 'bz@gmail.com', 'France', 'Philipe'),
-('BeuhNon', 'Nico', 'bn@gmail.com', 'France', 'BEUUUH'),
-('Azeau', 'Julia', 'aj@gmail.com', 'France', 'Paulo'),
-('LeBoulch', 'Antoine', 'la@gmail.com', 'France', 'Rose'),
-('LeBars', 'Nico', 'ln@gmail.com', 'France', 'miam'),
-('Cavaro', 'Alex', 'ca@gmail.com', 'France', 'Razer');
+('Brun', 'Zelman', 'brun.z@gmail.com', 'France', 'client1'),
+('Beunon', 'Nico', 'beunon.n@gmail.com', 'France', 'client2'),
+('Azeau', 'Julia', 'azeau.j@gmail.com', 'France', 'client3'),
+('LeBoulch', 'Antoine', 'leboulch.a@gmail.com', 'France', 'client4'),
+('LeBars', 'Nico', 'lebars.n@gmail.com', 'France', 'client5'),
+('Cavaro', 'Alex', 'cavaro.a@gmail.com', 'France', 'client6');
+
+insert into Admin(nom, prenom, email, pays, motdepasse, id_hotel)values
+('Joseph', 'Lewis', 'Lewis.j@gmail.com', 'France', 'admin0', 0),
+('Roger', 'Flores', 'flores.r@gmail.com', 'France', 'admin1', 1),
+('Tony', 'Butler', 'butler.t@gmail.com', 'France', 'admin2', 2),
+('Berry', 'Eugene', 'berry.e@gmail.com', 'France', 'admin3', 3),
+('Barton', 'Kim', 'Barton.k@gmail.com', 'France', 'admin4', 4);
 
 insert into Classe(denomination) values ('*'), ('**'), ('***');
 
