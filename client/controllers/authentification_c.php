@@ -2,10 +2,11 @@
 
 require_once ("../models/authentification.php");
 
-// ouverture de a session
+function verifauthent()
+{
+// verifier si $_Session
 // recup en post
 // appel de la fonction
-
 
 
 //$resulltat = authentification::authent($email, $mdp);
@@ -17,5 +18,5 @@ require_once ("../models/authentification.php");
 //else{
     //return "Erreur de connexion";
 //}
-
+}
 ?>
