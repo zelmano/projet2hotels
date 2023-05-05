@@ -10,6 +10,20 @@ CREATE TABLE Client
 PRIMARY KEY(id_client)
 );
 
+drop table if exists Admin CASCADE ;
+CREATE TABLE Admin
+(
+    id_admin SERIAL,
+    nom VARCHAR(100),
+    prenom VARCHAR(100),
+    email VARCHAR(255),
+    pays VARCHAR(255),
+    motDePasse VARCHAR(255),
+    id_hotel int not null,
+    PRIMARY KEY(id_admin),
+    FOREIGN KEY (id_hotel) REFERENCES Hotel (id_hotel)
+);
+
 
 
 drop table if exists Classe CASCADE ;
