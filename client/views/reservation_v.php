@@ -48,6 +48,7 @@
       <div class="form_selector">
         <label for="hotel">Hotel</label>
         <select name="hotel" id="hotel">
+          <option value="none">Tous les hotels</option>
           <?php
           //on récupère la liste des hotels et on les parcourt pour créer les différentes options de recherche
           for ($i=0;$i<count($hotels);$i++){
@@ -61,6 +62,7 @@
       <div class="form_selector">
         <label for="categorie">Catégorie</label>
         <select name="categorie" id="categorie">
+          <option value="none">Toutes les catégories</option>
           <?php
           //on récupère la liste des dénominations des categories de chambre et on les parcourt pour créer les différentes options de recherche
           for ($i=0;$i<count($categories);$i++){
