@@ -12,7 +12,7 @@
       <h1>Les Hotels</h1>
     </div>
     <div id="nav_user">
-      <h1 id="nav_username">$nom_client</h1> <!-- $nom_client -->
+      <h1 id="nav_username">$nom_client</h1>
       <img src="../sources/profile.svg" alt="profile">
     </div>
     <div id="nav_tabs">
