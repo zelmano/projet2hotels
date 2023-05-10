@@ -2,7 +2,7 @@
 <head>
   <meta charset="utf-8">
   <title>Mes Séjours</title>
-  <link rel="stylesheet" href="/client/scripts/style.css">
+  <link rel="stylesheet" href="../scripts/style.css">
 </head>
 <body>
   <h1>Mes Séjours</h1>

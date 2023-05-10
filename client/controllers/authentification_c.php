@@ -4,14 +4,14 @@ require_once ("../models/authentification.php");
 
 function verifAuthent()
 {
-    if(!empty($_SESSION["id_admin"])) {
+    if(!empty($_SESSION["id_client"])) {
         $email = $_POST["email"];
         $pwd = $_POST["pwd"];
 
         $admin = authentification::authent($email, $pwd); // appel de la fonction
 
-        if (!empty($resulltat['id_admin'])){
-            $_SESSION["id_admin"] = $admin["id_admin"];
+        if (!empty($resulltat['id_client'])){
+            $_SESSION["id_client"] = $admin["id_client"];
             echo "Connexion réussi !";
         }
         else{
