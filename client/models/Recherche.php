@@ -1,18 +1,23 @@
 <?php
+//
+// Codé par Julia
+//
+
 require_once('../models/Db.php');
 require_once('../models/reservation_m.php');
 require_once('../models/Chambre.php');
 
 
-class Recherche // codé par julia
+class Recherche
 {
-
+    //
     // Effectue les recherches selon certains critères
+    //
     static function getRecherche($hotel, $debut, $fin, $denomination)
     {
         // les dates par defauts
         $datedebut = '2020-01-01';
-        $datefin = '2024-12-30';
+        $datefin = '2080-12-30';
 
         $db = Db::connectionDB();
 
@@ -72,11 +77,14 @@ class Recherche // codé par julia
     }
 }
 
+//Permet de faire des tests
+
+/*
 $hotel = '1';
 $fin = 'none';
 $debut = 'none';
 $denomination = '1';
-
+*/
 
 //print_r(Recherche::getRecherche($hotel, $debut, $fin, $denomination));
 

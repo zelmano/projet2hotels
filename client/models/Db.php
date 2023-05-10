@@ -1,4 +1,9 @@
 <?php
+//
+// Codé par Zelman
+//
+
+
 extension_loaded('pdo_pgsql') or die('The PDO PostgreSQL extension is not enabled.');
 require_once('../config.php');
 class Db{

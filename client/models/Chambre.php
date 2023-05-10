@@ -1,4 +1,9 @@
 <?php
+//
+// Codé par Julia
+//
+
+
 require_once('../models/Db.php');
 require_once('../models/reservation_m.php');
 require_once('../models/Recherche.php');
@@ -6,7 +11,9 @@ require_once('../models/Recherche.php');
 
 // Contient les fonctions concernant les chambres
 class Chambre {
+    //
     // Renvoie la catégorie, l'hôtel et la classe d'une chambre
+    //
     static function getInfos($id){
 
         $db = Db::connectionDB();
@@ -21,7 +28,9 @@ class Chambre {
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+    //
     // Renvoie le prix d'une chambre selon sa classe et sa categorie
+    //
     static function getPrix($id){
 
         $db = Db::connectionDB();

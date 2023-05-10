@@ -1,4 +1,9 @@
 <?php
+//
+// Codé par Julia
+//
+
+
 require_once('../models/Db.php');
 
 require_once('../models/Recherche.php');
@@ -6,8 +11,10 @@ require_once('../models/Chambre.php');
 
 
 class Reservation{
-
-    //Fonction qui renvoie la liste du nom des hotels (zel)
+    //
+    // Fonction qui renvoie la liste du nom des hotels
+    // Codé par Zelman
+    //
     static function getHotels(){
         $db=Db::connectionDB();
         $request="SELECT nom FROM hotel";
@@ -15,8 +22,10 @@ class Reservation{
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-
-    //Fonction qui renvoie la liste des dénominations des catégories (zel)
+    //
+    //Fonction qui renvoie la liste des dénominations des catégories
+    // Codé par Zel
+    //
     static function getCategories(){
         $db=Db::connectionDB();
         $request="SELECT denomination FROM categorie";
@@ -24,8 +33,10 @@ class Reservation{
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-
+    //
     //Fonction qui renvoie les reservations
+    // Codé par Zelman
+    //
     static function getReservations(){
         $db=Db::connectionDB();
         $string='SELECT * FROM reservation';
@@ -33,8 +44,10 @@ class Reservation{
         $query->execute();
         return $query->fetchAll(); //PDO::FETCH_ASSOC
     }
-
-    // Cette fonction permet (une fois que le client a rempli les infos) de creer une nouvelle reservation
+    //
+    // Cette fonction permet de creer une nouvelle reservation
+    // (une fois que le client a rempli les infos)
+    //
     static function setReservation($id_client, $idchambre, $debut, $fin, $paiement, $nom){
         $db=Db::connectionDB();
 
@@ -55,8 +68,9 @@ class Reservation{
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     }
+    //
     // Cette fonction permet de calculer le nombre de réservation total
-
+    //
     static function nbrReservation(){
         $db=Db::connectionDB();
         $string='SELECT count(*) FROM reservation';
@@ -64,7 +78,9 @@ class Reservation{
         $query->execute();
         return $query->fetchAll(); //PDO::FETCH_ASSOC
     }
+    //
     // Recupere la listes des consommations appartenant à un sejour donné
+    //
     static function getConso($idsejour){
         $db=Db::connectionDB();
         $request = "SELECT cc.nombre, pc.prix, c2.denomination from reservation  r
@@ -79,8 +95,9 @@ class Reservation{
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-
+    //
     // Renvoie le prix total des consommations d'un sejour
+    //
     static function getPrixConso($idsejour){
         $tabconso = self::getConso($idsejour);
         $prixTot = 0;
@@ -89,7 +106,9 @@ class Reservation{
         }
         return $prixTot;
     }
+    //
     // Renvoie le prix total du sejour
+    //
     static function prixSejour($idsejour){
 
         $db=Db::connectionDB();
@@ -111,6 +130,11 @@ class Reservation{
 
     }
 }
+
+
+//
+// Code de test
+//
 
 //Reservation::setReservation(2,2,'2022-02-10','2022-02-13',NULL,'test1');
 //print_r(Reservation::getConso(22));

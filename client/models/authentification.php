@@ -1,6 +1,12 @@
 <?php
+//
+// Codé par Julia
+//
 
 class authentification{
+    //
+    // Permet de ce connecter (client)
+    //
     static function authent($email, $mdp)
     {
         $db = Db::connectionDB();
